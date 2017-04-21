@@ -1,0 +1,173 @@
+.activiteiten {
+  position: relative;
+  margin-bottom: 30px;
+
+  &.detail {
+    position: relative;
+
+    .datum {
+      z-index: 1;
+      position: absolute;
+      top: -20px;
+      left: 0;
+    }
+
+    .row-detail {
+      position: relative;
+
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        color: @white;
+        font-size: @big;
+        font-weight: @bold;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .img {
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+
+        width: 100%;
+        height: 175px;
+
+        &:after {
+          position: absolute;
+          opacity: 1;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+
+          content: '';
+          width:100%; height:100%;
+          top:0; left:0;
+          background:rgba(0,0,0,0.6);
+        }
+
+        &:hover {
+          &:after {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .extrainfo {
+    li {
+      &:before {
+        content: '';
+        margin-right: 0;
+      }
+    }
+    font-weight: @bold;
+    [class^="icon-"], [class*=" icon-"] {
+      color: @red;
+      margin-right: 6px;
+    }
+  }
+
+  .activiteit {
+    margin-bottom: 45px;
+  }
+
+  .datum {
+    background: @red;
+
+    @size: 80px;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+
+    width: @size;
+    height: @size;
+    display: table;
+
+    position: absolute;
+    left: 0;
+
+    div {
+      text-align: center;
+      color: @white;
+      font-weight: @bold;
+      font-family: @font;
+      font-size: 1.8rem;
+      display: table-cell;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+  }
+
+  .intro_act {
+    margin-bottom: 20px;
+  }
+
+  .center-button {
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
+}
+
+.albums {
+  .acitiviteiten {
+    &.detail {
+      .datum {
+        top: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1190px){
+  .activiteiten {
+    .datum {
+      @size: 60px;
+      width: @size;
+      height: @size;
+
+      div {
+        font-size: @normal;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px){
+  .activiteiten {
+    .activiteit {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &.detail_act {
+      margin-top: 20px;
+
+      h2 {
+        margin-left: 65px;
+        margin-bottom: 30px;
+      }
+
+      .back {
+        margin-top: 20px;
+      }
+    }
+
+    .datum {
+
+      @size: 55px;
+      width: @size;
+      height: @size;
+      div {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

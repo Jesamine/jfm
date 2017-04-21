@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'ForumController@index');
+Route::get('/about', 'ForumController@about');
+Route::get('/team', 'ForumController@team');
+Route::get('/contact', 'ForumController@contact');
+
+Route::resource('events', 'EventsController');
+Route::resource('albums', 'AlbumController');

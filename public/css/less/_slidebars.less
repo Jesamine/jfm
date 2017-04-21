@@ -1,0 +1,139 @@
+/* SLIDEBARS */
+
+/* Navbar Mobile */
+.public {
+  .navbar-mobile {
+
+    .container {
+      height: 70px;
+    }
+
+  	position: relative;
+    background-color: darken(@red, 5%);
+  	z-index: 1;
+
+  	.js-toggle-mobile-menu {
+  		background: none;
+  		border: none;
+  		padding: 30px 10px;
+
+  		span {
+  			display: block;
+  			width: 25px;
+  			height: 1px;
+  			background: @white;
+  			margin: 0 0 5px;
+
+  			&:last-child{
+  				margin: 0;
+  			}
+  		}
+  	}
+
+  	.logo {
+  		position: absolute;
+  		width: 50px;
+  		margin: 10px auto;
+  		right: 0;
+  		left: 0;
+  		z-index: 999;
+  	}
+  }
+
+  /* Slidebar */
+
+  [off-canvas*=shift][off-canvas*=left]{
+  	// background: rgba(87, 4, 12, 1) !important;
+    background-color: darken(@red, 5%) !important;
+  	&.sb-active { z-index: 999999999; }
+
+  	nav[role="pages"] {
+  		ul {
+  			margin: 0;
+
+  			li {
+  				list-style: none;
+
+  				a {
+  					display: block;
+  					font-size: @normal;
+  					color: @white;
+  					text-align: left;
+  					text-transform: none;
+  					text-decoration: none;
+  					padding: 15px 25px;
+  					font-family: @titlefont;
+
+  					&.active {
+  						font-weight: @bold;
+              font-size: @big;
+              background: darken(@red, 10%);
+  					}
+  				}
+  			}
+
+  			ul {
+  				li {
+  					a {
+  						display: block;
+  						font-family: @font;
+  						font-size: @big;
+  						text-align: left;
+  						color: @white;
+  						padding: 15px 50px;
+
+  						&.active {
+  							color: darken(@red, 10%);
+  						}
+  					}
+  				}
+
+  				ul {
+  					li {
+  						a {
+  							display: block;
+  							font-size: @normal;
+  							padding: 15px 75px;
+
+  							&.active {
+  								font-weight: 400;
+  							}
+  						}
+  					}
+  				}
+  			}
+  		}
+  	}
+
+    .info {
+      color: @white;
+      margin-top: 45px;
+      background: darken(@red, 12%);
+      text-align: center;
+      padding: 10px 0;
+
+      li {
+  			list-style: none;
+  			padding: 5px 25px;
+  			font-size: 1.25rem;
+  		}
+    }
+
+    .social-media {
+      text-align: center;
+      margin-top: 20px;
+      li{
+        font-size: @big;
+        display: inline-block;
+        padding-right: 20px;
+        &:first-child {
+          padding-left: 25px;
+        }
+        a {
+          color: @white;
+        }
+      }
+    }
+  }
+
+}
