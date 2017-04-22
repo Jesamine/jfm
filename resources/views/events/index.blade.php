@@ -66,7 +66,7 @@
                           </div>
                           @else
                           @foreach($recentEvents as $recentEvent)
-                          <a href="{{action('AlbumController@show', [$recentEvent->id])}}">
+                          <a href="{{action('EventsController@show', [$recentEvent->id])}}">
                               <div class="item">
                                   <div class="img" style="background-image: url('{{asset('/uploads/'.$recentEvent->image)}}')"></div>
                                   <div class="title">{{$recentEvent->title}}</div>

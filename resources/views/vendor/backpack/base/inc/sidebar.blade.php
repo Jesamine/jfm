@@ -32,6 +32,8 @@
 
           <li><a href="{{ url(config('backpack.base.route_prefix').'/event') }}"><i class="fa fa-calendar"></i> <span>Activiteiten</span></a></li>
 
+          <li><a href="{{ url(config('backpack.base.route_prefix').'/album') }}"><i class="fa fa-image"></i> <span>Albums</span></a></li>
+
           <li><a href="{{ url(config('backpack.base.route_prefix').'/sponser') }}"><i class="fa fa-address-book"></i> <span>Sponsers</span></a></li>
 
           <li><a href="{{ url(config('backpack.base.route_prefix').'/history') }}"><i class="fa fa-university"></i> <span>Geschiedenis</span></a></li>

@@ -21,7 +21,7 @@
                       <a href="{{action('AlbumController@show', [$album->id])}}" class="test"> 
                         <div class="col-sm-12"> 
                           <div class="row row-detail"> 
-                            <div class="img" style="background-image: url('/assets/_userfiles/{{$album->event->image}}"></div>
+                            <div class="img" style="background-image: url('{{asset('/uploads/'.$album->event->image)}}"></div>
                             <div class="title">{{$album->event->title}}</div>
                           </div> 
                         </div> 
