@@ -32,6 +32,39 @@ class EventCrudController extends CrudController
         $this->crud->setFromDb();
 
         // ------ CRUD FIELDS
+        $this->crud->addField([   // DateTime
+            'name' => 'date',
+            'label' => 'Datum',
+            'type' => 'datetime_picker',
+            // optional:
+            'datetime_picker_options' => [
+                'format' => 'DD/MM/YYYY HH:mm',
+                'language' => 'nl'
+            ]
+        ], 'both');
+        $this->crud->addField([   // Textarea
+            'name' => 'description',
+            'label' => 'Description',
+            'type' => 'summernote'
+        ], 'both');
+        $this->crud->addField([
+          'label' => 'Event',
+          'name' => 'image',
+          'type' => 'image',
+          'upload' => true,
+          'crop' => true,
+          'aspect_ratio' => '16:9'
+        ], 'both');
+        $this->crud->addField([   // Checkbox
+            'name' => 'expired',
+            'label' => 'Expired',
+            'type' => 'checkbox'
+        ], 'both');
+        $this->crud->addField([   // Checkbox
+            'name' => 'shown',
+            'label' => 'Shown',
+            'type' => 'checkbox'
+        ], 'both');
         // $this->crud->addField($options, 'update/create/both');
         // $this->crud->addFields($array_of_arrays, 'update/create/both');
         // $this->crud->removeField('name', 'update/create/both');

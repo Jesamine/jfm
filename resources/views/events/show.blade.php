@@ -32,10 +32,10 @@
                             <div class="col-sm-5">
                                 @if(!empty($event['fb_link']))
                                 <a href="https://www.facebook.com/events/{{$event->fb_link}}" target="_blank">
-                                    <img src="/assets/_userfiles/{{$event->image}}" alt="">
+                                    <img src="{{asset('uploads/'.$event->image)}}" alt="">
                                 </a>
                                 @else
-                                <img src="/assets/_userfiles/{{$event->image}}" alt="">
+                                <img src="{{$event->image}}" alt="">
                                 @endif
                             </div>
 
