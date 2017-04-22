@@ -58,10 +58,10 @@
 
                         <div id="slide-links" class="owl-carousel owl-theme">
                             @foreach($event->sponsers as $sponser)
-                                @if($sponser->img == '')
+                                @if($sponser->image == '')
                                     <div>{{$sponser->organisatie}}</div>
                                 @else
-                                    <img src="/assets/images/sponsers/{{$sponser->img}}" alt="">
+                                    <img src="{{asset('uploads/'.$sponser->image)}}" alt="">
                                 @endif
                             @endforeach
                         </div>

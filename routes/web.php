@@ -24,4 +24,5 @@ Route::resource('albums', 'AlbumController');
 
 Route::group(['prefix' => config('backpack.base.route_prefix'), 'admin', 'middleware'  => 'auth'], function(){
   CRUD::resource('event', 'Admin\EventCrudController');
+  CRUD::resource('sponser', 'Admin\SponserCrudController');
 });

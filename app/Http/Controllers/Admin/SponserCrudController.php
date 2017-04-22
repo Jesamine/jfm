@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\EventRequest as StoreRequest;
-use App\Http\Requests\EventRequest as UpdateRequest;
+use App\Http\Requests\SponserRequest as StoreRequest;
+use App\Http\Requests\SponserRequest as UpdateRequest;
 
-class EventCrudController extends CrudController
+class SponserCrudController extends CrudController
 {
 
     public function setUp()
@@ -19,9 +19,9 @@ class EventCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Models\Event');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/event');
-        $this->crud->setEntityNameStrings('event', 'events');
+        $this->crud->setModel('App\Models\Sponser');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/sponser');
+        $this->crud->setEntityNameStrings('sponser', 'sponsers');
 
         /*
         |--------------------------------------------------------------------------
@@ -31,25 +31,8 @@ class EventCrudController extends CrudController
 
         $this->crud->setFromDb();
 
-        // ------ CRUD FIELDS
-        $this->crud->addField([   // DateTime
-            'name' => 'date',
-            'label' => 'Datum',
-            'type' => 'datetime_picker',
-            'datetime_picker_options' => [
-                'format' => 'DD/MM/YYYY HH:mm',
-                'language' => 'nl'
-            ]
-        ], 'both');
-
-        $this->crud->addField([   // Textarea
-            'name' => 'description',
-            'label' => 'Description',
-            'type' => 'summernote'
-        ], 'both');
-
         $this->crud->addField([
-          'label' => 'Event',
+          'label' => 'Afbeelding',
           'name' => 'image',
           'type' => 'image',
           'upload' => true,
@@ -57,28 +40,7 @@ class EventCrudController extends CrudController
           'aspect_ratio' => '16:9'
         ], 'both');
 
-        $this->crud->addField([   // Checkbox
-            'name' => 'expired',
-            'label' => 'Expired',
-            'type' => 'checkbox'
-        ], 'both');
-
-        $this->crud->addField([   // Checkbox
-            'name' => 'shown',
-            'label' => 'Shown',
-            'type' => 'checkbox'
-        ], 'both');
-
-        $this->crud->addField([       // Select2Multiple = n-n relationship (with pivot table)
-        'label' => "Sponsers",
-        'type' => 'select2_multiple',
-        'name' => 'sponsers', // the method that defines the relationship in your Model
-        'entity' => 'sponsers', // the method that defines the relationship in your Model
-        'attribute' => 'organisatie', // foreign key attribute that is shown to user
-        'model' => "App\Models\Sponser", // foreign key model
-        'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
-        ], 'both');
-
+        // ------ CRUD FIELDS
         // $this->crud->addField($options, 'update/create/both');
         // $this->crud->addFields($array_of_arrays, 'update/create/both');
         // $this->crud->removeField('name', 'update/create/both');

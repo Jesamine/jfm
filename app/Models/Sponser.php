@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class Event extends Model
+class Sponser extends Model
 {
     use CrudTrait;
 
@@ -15,11 +15,11 @@ class Event extends Model
     |--------------------------------------------------------------------------
     */
 
-    //protected $table = 'events';
+    //protected $table = 'sponsers';
     //protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = [ 'title', 'intro', 'date', 'location', 'description', 'image', 'fb_link', 'expired', 'shown'];
+    protected $fillable = ['organisatie', 'image'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -33,7 +33,7 @@ class Event extends Model
     {
         $attribute_name = "image";
         $disk = "uploads";
-        $destination_path = "user_files/events";
+        $destination_path = "user_files/sponsers";
 
         // if the image was erased
         if ($value==null) {
@@ -57,15 +57,14 @@ class Event extends Model
             $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
         }
     }
-
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
     |--------------------------------------------------------------------------
     */
 
-    public function sponsers(){
-        return $this->belongsToMany('App\Models\Sponser')->withTimestamps();
+    public function products(){
+        return $this->belongsToMany('App\Models\Event')->withTimestamps();
     }
 
     /*
