@@ -26,4 +26,5 @@ Route::group(['prefix' => config('backpack.base.route_prefix'), 'admin', 'middle
   CRUD::resource('event', 'Admin\EventCrudController');
   CRUD::resource('sponser', 'Admin\SponserCrudController');
   CRUD::resource('history', 'Admin\HistoryCrudController');
+  CRUD::resource('link', 'Admin\LinkCrudController');
 });

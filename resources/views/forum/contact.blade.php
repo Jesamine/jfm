@@ -54,7 +54,7 @@
                             @foreach($links as $link)
                             <a href="http://www.{{$link->link}}" target="_blank">
                                 <div class="item">
-                                    <img src="assets/images/links/{{$link->img}}" alt="{{$link->organisatie}}">
+                                    <img src="{{asset('uploads/'.$link->image)}}" alt="{{$link->organisatie}}">
                                 </div>
                             </a>
                             @endforeach

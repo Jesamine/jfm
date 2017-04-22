@@ -36,6 +36,8 @@
 
           <li><a href="{{ url(config('backpack.base.route_prefix').'/history') }}"><i class="fa fa-university"></i> <span>Geschiedenis</span></a></li>
 
+          <li><a href="{{ url(config('backpack.base.route_prefix').'/link') }}"><i class="fa fa-chain"></i> <span>Links (contact)</span></a></li>
+
           <!-- Users, Roles Permissions -->
           <li class="treeview">
             <a href="#"><i class="fa fa-group"></i> <span>Gebruikers</span> <i class="fa fa-angle-left pull-right"></i></a>
