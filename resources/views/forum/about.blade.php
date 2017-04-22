@@ -72,7 +72,7 @@
                         @foreach($history_items as $history_item)
 
                         <div class="item">
-                            <img src="assets/images/history/history_0{{$history_item->id}}.jpg">
+                            <img src="{{asset('uploads/'.$history_item->image)}}">
                             <div class="content_history">
                                 {!! $history_item->description !!}
                             </div>

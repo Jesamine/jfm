@@ -34,7 +34,7 @@
 
           <li><a href="{{ url(config('backpack.base.route_prefix').'/sponser') }}"><i class="fa fa-address-book"></i> <span>Sponsers</span></a></li>
 
-          <li><a href="{{ url(config('backpack.base.route_prefix').'/page') }}"><i class="fa fa-university"></i> <span>Geschiedenis</span></a></li>
+          <li><a href="{{ url(config('backpack.base.route_prefix').'/history') }}"><i class="fa fa-university"></i> <span>Geschiedenis</span></a></li>
 
           <!-- Users, Roles Permissions -->
           <li class="treeview">
