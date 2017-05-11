@@ -57,7 +57,11 @@
                     <div class="container">
 
                         <div id="slide-links" class="owl-carousel owl-theme">
-                            @foreach($event->sponsers as $sponser)
+                          <?php
+                            $sponsers = iterator_to_array($event->sponsers);
+                            $shuffled = shuffle($sponsers);
+                          ;?>
+                            @foreach($sponsers as $sponser)
                                 @if($sponser->image == '')
                                     <div>{{$sponser->organisatie}}</div>
                                 @else
