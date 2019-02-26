@@ -28,10 +28,10 @@
         header.className += 'red';
       }
 
-      var role = main.getAttribute('role');
-      if(role == 'album-detail'){
-          galleria();
-      }
+      // var role = main.getAttribute('role');
+      // if(role == 'album-detail'){
+      //     galleria();
+      // }
     }
 
     function swipebox(){
@@ -201,20 +201,20 @@
       });
     }
 
-    function galleria(){
-      var element = document.getElementById('galleria');
-      var album_id = element.className;
-      Galleria.loadTheme('/js/vendor/galleria/themes/classic/galleria.classic.min.js');
-      Galleria.run('#galleria', {
-       facebook: 'album:' + album_id,
-       height: 550,
-       lightbox: true,
-       facebookOptions: {
-         max: 250,
-         facebook_access_token: '232961117114486|O4f1M-2vSym49PbrSW5iSemzt0g'
-       }
-      });
-    }
+    // function galleria(){
+    //   var element = document.getElementById('galleria');
+    //   var album_id = element.className;
+    //   Galleria.loadTheme('/js/vendor/galleria/themes/classic/galleria.classic.min.js');
+    //   Galleria.run('#galleria', {
+    //    facebook: 'album:' + album_id,
+    //    height: 550,
+    //    lightbox: true,
+    //    facebookOptions: {
+    //      max: 250,
+    //      facebook_access_token: '232961117114486|O4f1M-2vSym49PbrSW5iSemzt0g'
+    //    }
+    //   });
+    // }
 
     init();
 
