@@ -829,7 +829,7 @@ nav.paginationcontainer .pagination > li > a.active {
 }
 .activiteiten {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .activiteiten.detail {
   position: relative;
@@ -840,10 +840,14 @@ nav.paginationcontainer .pagination > li > a.active {
   top: -20px;
   left: 0;
 }
-.activiteiten.detail .row-detail {
+.activiteiten.detail .img {
   position: relative;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  padding-top: 56.25%;
 }
-.activiteiten.detail .row-detail .title {
+.activiteiten.detail .img .title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -853,15 +857,9 @@ nav.paginationcontainer .pagination > li > a.active {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  z-index: 2;
 }
-.activiteiten.detail .row-detail .img {
-  position: relative;
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  height: 175px;
-}
-.activiteiten.detail .row-detail .img:after {
+.activiteiten.detail .img:after {
   position: absolute;
   opacity: 1;
   -webkit-transition: all 0.5s;
@@ -874,7 +872,7 @@ nav.paginationcontainer .pagination > li > a.active {
   left: 0;
   background: rgba(0, 0, 0, 0.6);
 }
-.activiteiten.detail .row-detail .img:hover:after {
+.activiteiten.detail .img:hover:after {
   opacity: 0.5;
 }
 .activiteiten .extrainfo {
@@ -888,9 +886,6 @@ nav.paginationcontainer .pagination > li > a.active {
 .activiteiten .extrainfo [class*=" icon-"] {
   color: #9C121F;
   margin-right: 6px;
-}
-.activiteiten .activiteit {
-  margin-bottom: 45px;
 }
 .activiteiten .datum {
   background: #9C121F;
@@ -935,9 +930,6 @@ nav.paginationcontainer .pagination > li > a.active {
 }
 @media all and (max-width: 767px) {
   .activiteiten .activiteit {
-    margin-bottom: 25px;
-  }
-  .activiteiten .activiteit:last-child {
     margin-bottom: 0;
   }
   .activiteiten.detail_act {

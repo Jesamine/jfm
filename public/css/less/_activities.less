@@ -1,6 +1,6 @@
 .activiteiten {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   &.detail {
     position: relative;
@@ -12,8 +12,12 @@
       left: 0;
     }
 
-    .row-detail {
+    .img {
       position: relative;
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+      padding-top: 56.25%;
 
       .title {
         position: absolute;
@@ -26,33 +30,25 @@
         font-weight: @bold;
         text-transform: uppercase;
         text-align: center;
+        z-index: 2;
       }
 
-      .img {
-        position: relative;
-        background-position: center center;
-        background-size: cover;
+      &:after {
+        position: absolute;
+        opacity: 1;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
 
-        width: 100%;
-        height: 175px;
+        content: '';
+        width:100%; height:100%;
+        top:0; left:0;
+        background:rgba(0,0,0,0.6);
+      }
 
+      &:hover {
         &:after {
-          position: absolute;
-          opacity: 1;
-          -webkit-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
-
-          content: '';
-          width:100%; height:100%;
-          top:0; left:0;
-          background:rgba(0,0,0,0.6);
-        }
-
-        &:hover {
-          &:after {
-            opacity: 0.5;
-          }
+          opacity: 0.5;
         }
       }
     }
@@ -72,9 +68,9 @@
     }
   }
 
-  .activiteit {
-    margin-bottom: 45px;
-  }
+  // .activiteit {
+  //   margin-bottom: 45px;
+  // }
 
   .datum {
     background: @red;
@@ -141,10 +137,7 @@
 @media all and (max-width: 767px){
   .activiteiten {
     .activiteit {
-      margin-bottom: 25px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
 
     &.detail_act {

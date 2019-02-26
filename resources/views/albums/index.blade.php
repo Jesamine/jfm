@@ -11,22 +11,17 @@
                         </div>
                     </div>
 
-                    <div class="clear"></div>
-
                     @if($albums->isEmpty())
                     <p>Nog geen albums zichtbaar</p>
                     @else
                     @foreach($albums as $album)
-                    <div class="col-md-4 col-sm-6 activiteiten detail" data-equal-height="photo-detail"> 
-                      <a href="{{$album->fb_url}}" target="_blank" class="test"> 
-                        <div class="col-sm-12"> 
-                          <div class="row row-detail"> 
-                            <div class="img" style="background-image: url('{{asset('/uploads/'.$album->event->image)}}"></div>
+                    <a href="{{$album->fb_url}}" target="_blank" class="col-md-4 col-sm-6 "> 
+                      <div class="activiteiten detail"> 
+                          <div class="img" style="background-image: url('{{asset('/uploads/'.$album->event->image)}}">
                             <div class="title">{{$album->event->title}}</div>
-                          </div> 
-                        </div> 
-                      </a>
-                    </div> 
+                          </div>
+                      </div> 
+                    </a>
                     @endforeach
                     @endif
 
