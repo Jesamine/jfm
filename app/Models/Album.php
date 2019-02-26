@@ -19,7 +19,7 @@ class Album extends Model
     //protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['title', 'fb_album_id', 'event_id'];
+    protected $fillable = ['title', 'fb_album_id', 'fb_url', 'event_id'];
     // protected $hidden = [];
     // protected $dates = [];
 

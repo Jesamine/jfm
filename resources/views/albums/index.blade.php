@@ -18,7 +18,7 @@
                     @else
                     @foreach($albums as $album)
                     <div class="col-md-4 col-sm-6 activiteiten detail" data-equal-height="photo-detail"> 
-                      <a href="https://www.facebook.com/pg/Jeugdforum/photos/?tab=album&album_id={{$album->fb_album_id}}" target="_blank" class="test"> 
+                      <a href="{{$album->fb_url}}" target="_blank" class="test"> 
                         <div class="col-sm-12"> 
                           <div class="row row-detail"> 
                             <div class="img" style="background-image: url('{{asset('/uploads/'.$album->event->image)}}"></div>
