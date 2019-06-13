@@ -27,35 +27,29 @@ trait PageTemplates
                         'type'  => 'custom_html',
                         'value' => '<br><h2>Metas</h2><hr>',
                     ]);
-        $this->crud->addField([
-                        'name'     => 'meta_title',
-                        'label'    => 'Meta Title',
-                        'fake'     => true,
-                        'store_in' => 'extras',
-                    ]);
-        $this->crud->addField([
-                        'name'     => 'meta_description',
-                        'label'    => 'Meta Description',
-                        'fake'     => true,
-                        'store_in' => 'extras',
-                    ]);
-        $this->crud->addField([
-                        'name'     => 'meta_keywords',
-                        'type'     => 'textarea',
-                        'label'    => 'Meta Keywords',
-                        'fake'     => true,
-                        'store_in' => 'extras',
-                    ]);
+  
         $this->crud->addField([   // CustomHTML
                         'name'  => 'content_separator',
                         'type'  => 'custom_html',
                         'value' => '<br><h2>Content</h2><hr>',
                     ]);
         $this->crud->addField([
-                        'name'        => 'content',
-                        'label'       => 'Content',
+                        'name'        => 'content1',
+                        'label'       => 'Content 1',
                         'type'        => 'wysiwyg',
-                        'placeholder' => 'Your content here',
+                        'placeholder' => 'Inhoud hier',
+                    ]);
+        $this->crud->addField([
+                        'name'        => 'content2',
+                        'label'       => 'Content 2',
+                        'type'        => 'wysiwyg',
+                        'placeholder' => 'Inhoud hier',
+                    ]);
+        $this->crud->addField([
+                        'name'        => 'content3',
+                        'label'       => 'Content 3',
+                        'type'        => 'wysiwyg',
+                        'placeholder' => 'Inhoud hier',
                     ]);
     }
 

@@ -10,7 +10,7 @@ use App\Http\Requests;
 class AlbumController extends Controller
 {
     public function index(){
-        $albums = Album::paginate(9);
+        $albums = Album::orderBy('created_at', 'desc')->paginate(9);
         return view('albums.index', compact('albums'));
     }
 

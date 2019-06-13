@@ -13,7 +13,7 @@ class EventsController extends Controller
     public function index(){
         $events = \App\Event::where('expired', '0')
         ->where('shown', '1')
-        ->latest('date')->get();
+        ->orderBy('date', 'asc')->get();
 
         //$recentEvents = Album::all();
         $recentEvents = \App\Event::where('expired', '1')->where('shown', 1)->orderBy('date', 'DESC')->get();

@@ -21,14 +21,14 @@
           <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
-          <li class="treeview">
+          <!-- <li class="treeview">
               <a href="#"><i class="fa fa-newspaper-o"></i> <span>Pagina's</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="{{ url(config('backpack.base.route_prefix').'/article') }}"><i class="fa fa-vcard"></i> <span>Over JFM</span></a></li>
-                <li><a href="{{ url(config('backpack.base.route_prefix').'/category') }}"><i class="fa fa-handshake-o"></i> <span>Ons team</span></a></li>
-                <li><a href="{{ url(config('backpack.base.route_prefix').'/tag') }}"><i class="fa fa-bullhorn"></i> <span>Contact</span></a></li>
+                <li><a href="{{ url(config('backpack.base.route_prefix').'/about') }}"><i class="fa fa-vcard"></i> <span>Over JFM</span></a></li>
+                <li><a href="{{ url(config('backpack.base.route_prefix').'/team') }}"><i class="fa fa-handshake-o"></i> <span>Ons team</span></a></li>
+                <li><a href="{{ url(config('backpack.base.route_prefix').'/contact') }}"><i class="fa fa-bullhorn"></i> <span>Contact</span></a></li>
               </ul>
-          </li>
+          </li> -->
 
           <li><a href="{{ url(config('backpack.base.route_prefix').'/event') }}"><i class="fa fa-calendar"></i> <span>Activiteiten</span></a></li>
 
