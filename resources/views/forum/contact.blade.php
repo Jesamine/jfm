@@ -19,7 +19,7 @@
                             <p>Heb je vragen, bemerkingen, suggesties, problemen, wil je lid worden van het Jeugdforum of heb je een band waarmee je wenst op te treden, <b>aarzel niet om ons te contacteren via volgende kanalen</b> </p>
 
                             <ul>
-                                <li>info@jeugdforum.be</li>
+                                <li>info@jeugdforummoere.be</li>
                                 <li>De voorzitter, Ward <a href="tel:+32472809343">0472 / 80 93 43</a></li>
                             </ul>
 

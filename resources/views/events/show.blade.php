@@ -48,7 +48,7 @@
 
                 @unless($event->sponsers->isEmpty())
                 <div class="container-fluid history">
-                    <h1 class="center">Sponsers</h1>
+                    <h1 class="center">Sponsors</h1>
                     <div class="customNavigation">
                         <a class="icon-left prev"></a>
                         <a class="icon-right next"></a>
