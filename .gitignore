@@ -6,3 +6,6 @@
 Homestead.yaml
 Homestead.json
 .env
+/backup
+/public/assets/_userfiles
+/public/uploads
