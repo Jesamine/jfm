@@ -182,13 +182,12 @@
         var slide_links = $('#slide-links');
         slide_links.owlCarousel({
           navigation: false,
-          responsiveClass: true,
           items: 4,
-          itemsDesktoplarg : [1000,2], //5 items between 1000px and 901px
-              itemsDesktop : [700,2],
-              itemsDesktopSmall : [660,2],// betweem 900px and 601px
-              itemsTablet: [650,2], //2 items between 600 and 0
-              itemsMobile : [480,1]
+          responsive: {
+            480: { items: 2},
+            768: { items: 3},
+            1024: { items: 4}
+          }
         });
 
         $('.next').click(function(){
