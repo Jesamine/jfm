@@ -829,7 +829,7 @@ nav.paginationcontainer .pagination > li > a.active {
 }
 .activiteiten {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .activiteiten.detail {
   position: relative;
@@ -839,6 +839,43 @@ nav.paginationcontainer .pagination > li > a.active {
   position: absolute;
   top: -20px;
   left: 0;
+}
+.activiteiten.detail .row-detail {
+  position: relative;
+}
+.activiteiten.detail .row-detail .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.activiteiten.detail .row-detail .img {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 175px;
+}
+.activiteiten.detail .row-detail .img:after {
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.activiteiten.detail .row-detail .img:hover:after {
+  opacity: 0.5;
 }
 .activiteiten.detail .img {
   position: relative;
@@ -872,8 +909,10 @@ nav.paginationcontainer .pagination > li > a.active {
   left: 0;
   background: rgba(0, 0, 0, 0.6);
 }
-.activiteiten.detail .img:hover:after {
-  opacity: 0.5;
+.activiteiten.detail .img:hover:after,
+.activiteiten.detail .img:focus:after,
+.activiteiten.detail .img:active:after {
+  background: rgba(0, 0, 0, 0.4);
 }
 .activiteiten .extrainfo {
   font-weight: 700;
@@ -886,6 +925,9 @@ nav.paginationcontainer .pagination > li > a.active {
 .activiteiten .extrainfo [class*=" icon-"] {
   color: #9C121F;
   margin-right: 6px;
+}
+.activiteiten .activiteit {
+  margin-bottom: 45px;
 }
 .activiteiten .datum {
   background: #9C121F;
@@ -930,6 +972,9 @@ nav.paginationcontainer .pagination > li > a.active {
 }
 @media all and (max-width: 767px) {
   .activiteiten .activiteit {
+    margin-bottom: 25px;
+  }
+  .activiteiten .activiteit:last-child {
     margin-bottom: 0;
   }
   .activiteiten.detail_act {
@@ -958,6 +1003,23 @@ nav.paginationcontainer .pagination > li > a.active {
 }
 #map {
   height: 400px;
+}
+.popup-img {
+  margin-bottom: 25px;
+  height: 100px;
+  position: relative;
+}
+.popup-img img {
+  max-width: 90%;
+  width: auto;
+  max-height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 #team {
   margin-bottom: 20px;

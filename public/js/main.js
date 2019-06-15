@@ -218,4 +218,10 @@
 
     init();
 
+    $(document).ready(function(){
+      if($('#popup').length > 0){
+        $('#popup').modal('show');
+      }
+    });
+
 })();

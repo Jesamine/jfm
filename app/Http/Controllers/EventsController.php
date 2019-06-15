@@ -18,17 +18,21 @@ class EventsController extends Controller
         //$recentEvents = Album::all();
         $recentEvents = \App\Event::where('expired', '1')->where('shown', 1)->orderBy('date', 'DESC')->get();
 
-        return view('events.index', compact('events', 'recentEvents'));
+        $popup = false;
+
+        return view('events.index', compact('events', 'recentEvents', 'popup'));
     }
 
     public function show($id){
         $event = \App\Event::find($id);
 
+        $popup = false;
+
         if(is_null($event)){
             abort(404);
         }
 
-        return view('events.show', compact('event'));
+        return view('events.show', compact('event', 'popup'));
     }
     public function create(){}
     public function store(Request $request){}

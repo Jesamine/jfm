@@ -157,6 +157,34 @@
     </footer>
 
 </div>
+  @if(!empty($popup))
+  <!-- Modal -->
+  <div class="modal fade" id="popup" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Tomoereland 2019</h2>
+          <h4>Bedankt aan de sponsors</h4>
+        </div>
+        <div class="modal-body">
+          @if(!$headsponsers->isEmpty())
+          @foreach($headsponsers as $headsponser)
+          <div class="col-xs-4 popup-img text-center">
+            <img src="{{asset('/uploads/'.$headsponser->image)}}" alt="{{$headsponser->organisatie}}">
+          </div>
+          @endforeach
+
+          <a href="{{action('EventsController@show', [$popup->id])}}#event_sponsers" class="button red">Bekijk alle sponsers</a>
+          @endif
+        </div>
+      </div>
+
+    </div>
+  </div>
+  @endif
 <script src="/js/vendor/jquery/jquery.min.js"></script>
 <script src="/js/vendor/bootstrap/bootstrap.min.js"></script>
 <script src="/js/vendor/slidebars.min.js"></script>

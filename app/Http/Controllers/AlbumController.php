@@ -11,7 +11,8 @@ class AlbumController extends Controller
 {
     public function index(){
         $albums = Album::orderBy('created_at', 'desc')->paginate(9);
-        return view('albums.index', compact('albums'));
+        $popup = false;
+        return view('albums.index', compact('albums', 'popup'));
     }
 
     public function show($id){
