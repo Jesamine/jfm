@@ -177,7 +177,7 @@
           </div>
           @endforeach
 
-          <a href="{{action('EventsController@show', [$popup->id])}}#event_sponsers" class="button red">Bekijk alle sponsers</a>
+          <a href="{{action('EventsController@show', [$popup->id])}}#event_sponsers" class="button red">Bekijk alle sponsors</a>
           @endif
         </div>
       </div>
