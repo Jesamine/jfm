@@ -58,8 +58,12 @@
 
                         <div id="slide-links" class="owl-carousel owl-theme">
                           <?php
-                            $sponsers = iterator_to_array($event->sponsers);
-                            $shuffled = shuffle($sponsers);
+                            if($event->random == 1){
+                              $sponsers = iterator_to_array($event->sponsers);
+                              shuffle($sponsers);
+                            }else{
+                              $sponsers = $event->sponsers()->orderBy('event_sponser.sequence', 'asc')->get();
+                            }
                           ;?>
                             @foreach($sponsers as $sponser)
                                 @if($sponser->image == '')

@@ -59,13 +59,19 @@ class EventCrudController extends CrudController
 
         $this->crud->addField([   // Checkbox
             'name' => 'expired',
-            'label' => 'Expired',
+            'label' => 'Verlopen',
             'type' => 'checkbox'
         ], 'both');
 
         $this->crud->addField([   // Checkbox
             'name' => 'shown',
-            'label' => 'Shown',
+            'label' => 'Zichtbaar',
+            'type' => 'checkbox'
+        ], 'both');
+
+        $this->crud->addField([   // Checkbox
+            'name' => 'random',
+            'label' => 'Toon sponsors in willekeurig volgorde',
             'type' => 'checkbox'
         ], 'both');
 
@@ -87,8 +93,8 @@ class EventCrudController extends CrudController
         // ------ CRUD COLUMNS
         // $this->crud->addColumn(); // add a single column, at the end of the stack
         // $this->crud->addColumns(); // add multiple columns, at the end of the stack
-        // $this->crud->removeColumn('column_name'); // remove a column from the stack
-        // $this->crud->removeColumns(['column_name_1', 'column_name_2']); // remove an array of columns from the stack
+        // $this->crud->removeColumn('image'); // remove a column from the stackx
+        $this->crud->removeColumns(['image', 'fb_link', 'description', 'intro', 'location']); // remove an array of columns from the stack
         // $this->crud->setColumnDetails('column_name', ['attribute' => 'value']); // adjusts the properties of the passed in column (by name)
         // $this->crud->setColumnsDetails(['column_1', 'column_2'], ['attribute' => 'value']);
 
@@ -110,7 +116,8 @@ class EventCrudController extends CrudController
 
         // ------ CRUD DETAILS ROW
         // $this->crud->enableDetailsRow();
-        // NOTE: you also need to do allow access to the right users: $this->crud->allowAccess('details_row');
+        // NOTE: you also need to do allow access to the right users:
+        // $this->crud->allowAccess('details_row');
         // NOTE: you also need to do overwrite the showDetailsRow($id) method in your EntityCrudController to show whatever you'd like in the details row OR overwrite the views/backpack/crud/details_row.blade.php
 
         // ------ REVISIONS
@@ -140,7 +147,7 @@ class EventCrudController extends CrudController
         // $this->crud->addClause('withoutGlobalScopes');
         // $this->crud->addClause('withoutGlobalScope', VisibleScope::class);
         // $this->crud->with(); // eager load relationships
-        // $this->crud->orderBy();
+        $this->crud->orderBy('date', 'DESC');
         // $this->crud->groupBy();
         // $this->crud->limit();
     }

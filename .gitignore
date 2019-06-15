@@ -8,4 +8,5 @@ Homestead.json
 .env
 /backup
 /public/assets/_userfiles
+/public/assets/images
 /public/uploads
