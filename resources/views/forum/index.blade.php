@@ -5,7 +5,7 @@
         <div class="wrapper home">
             <div class="container-fluid" id="fixed-position" canvas>
                 <div class="row">
-                    <div class="img_bg" style="background-image: url('assets/images/bg_01.jpg');">
+                    <div class="img_bg" style="background-image: url('assets/images/bg_02.jpg');">
                         <h1 class="marker">Jeugdforum Moere</h1>
                         <ul class="borders">
                             <li></li>

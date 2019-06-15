@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="jeugdhuis" />
-    <meta name="keywords" content=" jeugdhuis, moere, gistel" />
+    <meta name="description" content="Jeugdhuis Jeugdforum Moere" />
+    <meta name="keywords" content=" jeugdhuis, jeugdforum, moere, gistel" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/vendor/bootstrap/bootstrap.min.css">
