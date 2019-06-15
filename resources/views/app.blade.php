@@ -151,7 +151,7 @@
 
         <div class="container-fluid disclaimer">
             <div class="container">
-                <p class="text-center">Jeugdforum Moere 2016 - Jesamine Deprez-Degryse</p>
+                <p class="text-center">Jeugdforum Moere <?php echo date("Y"); ?>  - Jesamine Deprez-Degryse</p>
             </div>
         </div>
     </footer>
