@@ -11,9 +11,6 @@
 |
 */
 
-
-Auth::routes();
-
 Route::get('/', 'ForumController@index');
 Route::get('/about', 'ForumController@about');
 Route::get('/team', 'ForumController@team');
